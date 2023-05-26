@@ -1,13 +1,14 @@
 import Body from "../../components/body/body";
 import Header from "../../components/header/header";
+import Style from "./style";
 
 const MainLayout = () => {
   return (
-    <div>
+    <Style>
       <Header />
       <Body />
       Hello
-    </div>
+    </Style>
   );
 };
 export default MainLayout;

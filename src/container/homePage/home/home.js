@@ -1,5 +1,5 @@
-import { Avatar, Card, Space, Typography } from "antd";
-const { Title, Paragraph } = Typography;
+import { Avatar, Card, Image, Space, Typography } from "antd";
+const { Title, Paragraph, Text } = Typography;
 const url =
   "https://firebasestorage.googleapis.com/v0/b/web-chat-neil.appspot.com/o/09328b69-10c8-410c-b03c-2518e32318b9_beluga.jpg?alt=media&token=a813bd79-d9cd-4017-ae34-22b4aa8abd51";
 const image =
@@ -12,13 +12,9 @@ const Home = () => {
       <div>
         <Avatar src={url} size="large" />
         <Title>Hi, I'm Long.</Title>
-        <Paragraph>{introduction}</Paragraph>
+        <Text>{introduction}</Text>
       </div>
-      <Card
-        hoverable
-        style={{ width: 240 }}
-        cover={<img alt="example" src={image} />}
-      ></Card>
+      <Image width={240} src={image} />
     </Space>
   );
 };
