@@ -1,12 +1,13 @@
-import { Avatar, Card, Image, Space, Typography } from "antd";
+import { Avatar, Card, Image, Typography } from "antd";
 import Style from "./styles";
 import {
   GithubOutlined,
-  FacebookOutlined,
-  LinkedinOutlined,
   FacebookFilled,
   LinkedinFilled,
 } from "@ant-design/icons";
+import { SectionHome } from "../../../configs/constant";
+import Rive from "@rive-app/react-canvas";
+
 const { Title, Paragraph, Text } = Typography;
 
 const url =
@@ -17,7 +18,7 @@ const introduction =
   "Mục tiêu nghề nghiệp của tôi là trở thành một lập trình viên Web. Tôi muốn phát triển khả năng làm việc trên cả phía front-end và back-end của ứng dụng web để có thể xây dựng và triển khai các sản phẩm toàn diện";
 const Home = () => {
   return (
-    <Style className="d-flex flex-row">
+    <Style id={SectionHome.HOME} className="d-flex flex-row">
       <div className="content">
         <Avatar src={url} size="large" />
         <Title>Hi, I'm Long.</Title>
@@ -38,7 +39,9 @@ const Home = () => {
         </div>
       </div>
       <div className="card-image">
-        <Image width={240} src={image} />
+        <Rive src="../../../assets/astronauta.riv" />
+
+        {/* <Image width={240} src={image} /> */}
       </div>
     </Style>
   );

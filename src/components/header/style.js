@@ -1,7 +1,8 @@
 import styled from "styled-components";
-// import { Layout } from "antd";
-// const { Header } = Layout;
-const Style = styled.div`
+import { Layout } from "antd";
+const { Header } = Layout;
+const Style = styled(Header)`
+  height: 0;
   .header {
     border-radius: 10px;
     width: 50%;

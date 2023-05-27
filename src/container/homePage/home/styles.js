@@ -27,6 +27,19 @@ const Style = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
+    border-radius: 10px;
+
+    .ant-image {
+      img {
+        border-radius: 10px;
+      }
+      .ant-image-mask {
+        border-radius: 10px;
+      }
+    }
+    .custom-preview-mask {
+      border-radius: 10px;
+    }
     /* padding-right: 10%; */
     margin: auto;
   }
