@@ -5,7 +5,7 @@ import Style from "./style";
 const MainLayout = () => {
   return (
     <Style>
-      <Header />
+      <Header className="header" />
       <Body />
       Hello
     </Style>

@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { Layout } from "antd";
-const { Header } = Layout;
-const Style = styled(Header)`
-  background-color: white;
+// import { Layout } from "antd";
+// const { Header } = Layout;
+const Style = styled.div`
   .header {
     border-radius: 10px;
     width: 50%;
     height: 3em;
     .list-header {
+      background-color: white;
       list-style-type: none;
       border-radius: 30px;
       box-shadow: 0px 0px 7px;
