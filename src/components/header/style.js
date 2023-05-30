@@ -3,6 +3,7 @@ import { Layout } from "antd";
 const { Header } = Layout;
 const Style = styled(Header)`
   height: 0;
+  /* background-color: gray; */
   .header {
     border-radius: 10px;
     width: 50%;
@@ -18,11 +19,17 @@ const Style = styled(Header)`
       li {
         height: 3em;
         line-height: 3em;
+        text-decoration: none;
+      }
+      .active {
+        color: orange;
+        /* font-weight: bosld; */
+        text-decoration: none;
       }
     }
-    .list-header a:first-child li {
+    /* .list-header a:first-child li {
       color: orange;
-    }
+    } */
   }
 `;
 export default Style;

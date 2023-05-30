@@ -1,9 +1,10 @@
 import { Divider } from "antd";
 import Style from "./style";
+import { SectionHome } from "../../../configs/constant";
 
 const Project = () => {
   return (
-    <Style>
+    <Style id={SectionHome.PROJECT}>
       <div className="container-title">
         <Divider className="title-divider">Project</Divider>
       </div>

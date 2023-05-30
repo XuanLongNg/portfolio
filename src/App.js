@@ -21,7 +21,7 @@ function App() {
     };
   });
   const element = useRoutes(convertRoutes);
-  return <div className="App">{element}</div>;
+  return <div className="App scroll-bar">{element}</div>;
 }
 
 export default App;

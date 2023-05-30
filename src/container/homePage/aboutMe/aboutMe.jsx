@@ -1,3 +1,4 @@
+import { SectionHome } from "../../../configs/constant";
 import Style from "./style";
 import { Divider, Image } from "antd";
 const introduction =
@@ -9,7 +10,7 @@ const image =
 
 const AboutMe = () => {
   return (
-    <Style>
+    <Style id={SectionHome.ABOUT}>
       <div className="container-title">
         <Divider className="title-divider">About me</Divider>
       </div>
