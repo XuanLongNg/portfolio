@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const Style = styled.div`
-  height: 80vh;
+  /* height: 80vh; */
   width: 80%;
   margin: auto;
+  padding-bottom: 5em;
   .container-title {
     .title-divider {
       font-size: 2em;
@@ -11,32 +12,20 @@ const Style = styled.div`
       margin-bottom: 100px;
     }
   }
-  .container-content {
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      padding: 0 1em;
+  .container {
+    width: 100%;
+    .animation {
+      width: 60%;
     }
-    .card-image {
-      width: 50%;
-      height: 300px;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: center;
-      border-radius: 10px;
-      /* margin: 7% 0; */
-      .ant-image {
-        img {
-          border-radius: 10px;
-        }
-        .ant-image-mask {
-          border-radius: 10px;
-        }
+    .send-message {
+      .icon-email {
+        font-size: 2em;
       }
-      .custom-preview-mask {
-        border-radius: 10px;
+      .form-send-message {
+        margin-top: 1em;
       }
+      display: block;
+      width: 40%;
     }
   }
 `;
