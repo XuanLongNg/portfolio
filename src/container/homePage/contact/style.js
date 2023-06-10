@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../../styles/colors";
 
 const Style = styled.div`
   /* height: 80vh; */
@@ -8,7 +9,8 @@ const Style = styled.div`
   .container-title {
     .title-divider {
       font-size: 2em;
-      border-color: black;
+      border-color: ${colors.main_text_color};
+      color: ${colors.main_text_color};
       margin-bottom: 100px;
     }
   }
@@ -23,6 +25,15 @@ const Style = styled.div`
       }
       .form-send-message {
         margin-top: 1em;
+        .btn-send {
+          background-color: ${colors.light_blue};
+          color: ${colors.main_text_color};
+          transition: background-color 0.4 ease;
+        }
+        .btn-send:hover {
+          background-color: ${colors.main_text_color};
+          color: ${colors.light_blue};
+        }
       }
       display: block;
       width: 40%;

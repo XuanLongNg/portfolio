@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../../styles/colors";
 
 const Style = styled.div`
   height: 80vh;
@@ -6,11 +7,21 @@ const Style = styled.div`
   margin: auto;
   .title-divider {
     font-size: 2em;
-    border-color: black;
+    border-color: ${colors.main_text_color};
+    color: ${colors.main_text_color};
+
     margin-bottom: 100px;
   }
-  h3 {
-    margin-bottom: 300px;
+  .list-card {
+    .item {
+      .card {
+        text-decoration: none;
+        .ant-card {
+          height: 20em;
+        }
+      }
+      /* height: 3em; */
+    }
   }
 `;
 export default Style;

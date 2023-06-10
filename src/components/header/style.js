@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Layout } from "antd";
+import colors from "../../styles/colors";
 const { Header } = Layout;
 const Style = styled(Header)`
   height: 0;
@@ -22,8 +23,9 @@ const Style = styled(Header)`
         text-decoration: none;
       }
       .active {
-        color: orange;
-        /* font-weight: bosld; */
+        color: ${colors.light_blue};
+        /* font-size: 20px; */
+        font-weight: bold;
         text-decoration: none;
       }
     }

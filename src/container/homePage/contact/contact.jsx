@@ -3,7 +3,7 @@ import { SectionHome } from "../../../configs/constant";
 import Style from "./style";
 import { Button, Divider, Form, Image, Input } from "antd";
 import Rive from "rive-react";
-import riveAnimation from "../../../assets/astronaut_with_moon.riv";
+import riveAnimation from "../../../assets/astronaut_with_moon_final.riv";
 import { MailOutlined } from "@ant-design/icons";
 const description =
   "I'm available for freelance work. Connect with me via the social networking sites or by email below. If you have a question or want to say hi, please fill in the form below and submit it, I'll try my best to get back to you!";
@@ -44,7 +44,9 @@ const Contact = () => {
               <TextArea placeholder="Message" rows={4} />
             </Form.Item>
             <Form.Item className="d-flex flex-row-reverse">
-              <Button type="primary">Send messages</Button>
+              <Button type="primary" className="btn-send">
+                Send messages
+              </Button>
             </Form.Item>
           </Form>
         </div>

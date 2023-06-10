@@ -10,20 +10,13 @@ const Project = () => {
       description:
         "Webchat is a real-time messaging application that allows users to send and receive messages instantly",
       link: "https://github.com/XuanLongNg/Webchat.git",
-      technical: [
-        "Typescript",
-        "ReactJs",
-        "NodeJs",
-        "ExpressJs",
-        "Ant Design",
-        "Firebase Realtime",
-      ],
+      technical: ["ReactJs", "ExpressJs", "Firebase Realtime"],
     },
     {
       title: "React Portfolio",
       description: "The Portfolio project built with react",
       link: "https://github.com/XuanLongNg/portfolio.git",
-      technical: ["React", "Rive", "Ant Design"],
+      technical: ["ReactJs", "Rive", "Ant Design"],
     },
     {
       title: "Fireboy & Watergirl",
@@ -32,6 +25,13 @@ const Project = () => {
       link: "https://github.com/XuanLongNg/Fireboy-and-Watergirl.git",
       technical: ["Python", "Pygame"],
     },
+    {
+      title: "Library Web",
+      description:
+        "A library website with the function of buying and selling books for users and managing books for admin",
+      link: "https://github.com/XuanLongNg/library_management.git",
+      technical: ["ReactJs", "ExpressJs", "MySql"],
+    },
   ]);
   return (
     <Style id={SectionHome.PROJECT}>
@@ -39,11 +39,16 @@ const Project = () => {
         <Divider className="title-divider">Project</Divider>
       </div>
       <List
+        className="list-card"
         grid={{ gutter: 16, column: 4 }}
         dataSource={data}
         renderItem={(item) => (
-          <List.Item>
-            <a href={item.link}>
+          <List.Item
+            className="item"
+            data-aos="fade-down"
+            data-aos-easing="ease-in-out"
+          >
+            <a className="card" href={item.link}>
               <Card title={item.title}>
                 {item.description}
                 <br />
@@ -55,9 +60,6 @@ const Project = () => {
           </List.Item>
         )}
       />
-      <div data-aos="fade-down" data-aos-easing="ease-in-out">
-        <p>Hello</p>
-      </div>
     </Style>
   );
 };

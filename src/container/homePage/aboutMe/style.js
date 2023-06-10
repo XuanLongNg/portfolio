@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../../styles/colors";
 
 const Style = styled.div`
   height: 80vh;
@@ -7,7 +8,8 @@ const Style = styled.div`
   .container-title {
     .title-divider {
       font-size: 2em;
-      border-color: black;
+      color: ${colors.main_text_color};
+      border-color: ${colors.main_text_color};
       margin-bottom: 100px;
     }
   }
@@ -17,6 +19,9 @@ const Style = styled.div`
       flex-direction: column;
       justify-content: end;
       padding: 0 1em;
+      .title {
+        color: ${colors.light_blue};
+      }
     }
     .card-image {
       width: 50%;
