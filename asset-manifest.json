@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e15174df.css",
+    "main.js": "./static/js/main.5de57209.js",
+    "static/media/astronaut_with_moon_final.riv": "./static/media/astronaut_with_moon_final.f8fec2bf5ca9f5c26dea.riv",
+    "static/media/new_file.riv": "./static/media/new_file.9d1765370d1f89533009.riv",
+    "static/media/astronaut_final.riv": "./static/media/astronaut_final.f95732910c448aaff2f8.riv",
+    "static/media/logo.svg": "./static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "./index.html",
+    "main.e15174df.css.map": "./static/css/main.e15174df.css.map",
+    "main.5de57209.js.map": "./static/js/main.5de57209.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e15174df.css",
+    "static/js/main.5de57209.js"
+  ]
+}
