@@ -9,11 +9,11 @@ const Header = () => {
     return (
       <Link
         activeClass="active"
-        to={to}
-        spy={true}
         smooth={true}
         offset={-100}
-        duration={500}
+        spy={true}
+        to={to}
+        duration={100}
       >
         <li>
           {icon} {title}

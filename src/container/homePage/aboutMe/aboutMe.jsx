@@ -1,6 +1,7 @@
 import { SectionHome } from "../../../configs/constant";
 import Style from "./style";
 import { Divider, Image } from "antd";
+import avatar from "../../../assets/z4072164143770_71972f838b03628554f12dff4cfb6d44.jpg";
 const introduction =
   "Hi there, I'm Long. I'm a 3rd year student at the Institute of Posts and Telecommunications Technology. I got interested in Web Development, and I am trying to learn and become a Web Developer. Currently, I am working at Code Mely - an IT community in Vietnam.";
 const goal =
@@ -22,7 +23,7 @@ const AboutMe = () => {
           data-aos-easing="ease-in-out"
           //   data-aos-anchor-placement="top-bottom"
         >
-          <Image width={300} src={image} preview={false} />
+          <Image height={"300px"} src={avatar} preview={false} />
         </div>
         <div
           className="content"
