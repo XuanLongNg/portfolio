@@ -50,11 +50,16 @@ const Project = () => {
           >
             <a className="card" href={item.link}>
               <Card title={item.title}>
-                {item.description}
-                <br />
-                {item.technical.map((item) => {
-                  return <Tag color="#2db7f5">{item}</Tag>;
-                })}
+                <p className="description">{item.description}</p>
+                <div className="tag-icon">
+                  {item.technical.map((item) => {
+                    return (
+                      <Tag className="tag-name" color="#2db7f5">
+                        {item}
+                      </Tag>
+                    );
+                  })}
+                </div>
               </Card>
             </a>
           </List.Item>

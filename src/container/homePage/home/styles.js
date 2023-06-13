@@ -52,13 +52,14 @@ const Style = styled.div`
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    height: 70vh;
+    height: auto;
   }
   @media screen and (max-width: 767px) {
-    height: 70vh;
+    height: auto;
     .content {
       width: 100%;
       padding: 10%;
+      margin-top: 150px;
     }
     .card-image,
     .avatar {

@@ -14,8 +14,9 @@ const Style = styled.div`
     }
   }
   .container-content {
+    padding: 3em 0;
     .content {
-      width: 50%;
+      width: 60%;
       display: flex;
       flex-direction: column;
       justify-content: end;
@@ -25,7 +26,7 @@ const Style = styled.div`
       }
     }
     .card-image {
-      width: 50%;
+      width: 40%;
       height: 300px;
       display: flex;
       flex-direction: row-reverse;
@@ -46,10 +47,20 @@ const Style = styled.div`
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    height: 60vh;
+    height: auto;
+    .container-title {
+      .title-divider {
+        margin-bottom: 50px;
+      }
+    }
   }
   @media screen and (max-width: 767px) {
     height: auto;
+    .container-title {
+      .title-divider {
+        margin-bottom: 50px;
+      }
+    }
     .container-content {
       display: block;
       .card-image {

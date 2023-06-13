@@ -19,6 +19,16 @@ const Style = styled.div`
         .ant-card {
           height: 20em;
         }
+        .description {
+          overflow: hidden;
+          max-height: 9em;
+          margin-bottom: 0.5em;
+        }
+        .tag-icon {
+          .tag-name {
+            margin: 2px;
+          }
+        }
       }
       /* height: 3em; */
     }
