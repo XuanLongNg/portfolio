@@ -24,14 +24,23 @@ const Style = styled(Header)`
       }
       .active {
         color: ${colors.light_blue};
-        /* font-size: 20px; */
+
         font-weight: bold;
         text-decoration: none;
       }
     }
-    /* .list-header a:first-child li {
-      color: orange;
-    } */
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+      width: 80%;
+      height: 4em;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .header {
+      width: 100%;
+      height: 4em;
+    }
   }
 `;
 export default Style;

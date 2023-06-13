@@ -51,5 +51,19 @@ const Style = styled.div`
       border-radius: 10px;
     }
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 70vh;
+  }
+  @media screen and (max-width: 767px) {
+    height: 70vh;
+    .content {
+      width: 100%;
+      padding: 10%;
+    }
+    .card-image,
+    .avatar {
+      display: none;
+    }
+  }
 `;
 export default Style;

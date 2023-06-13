@@ -15,6 +15,7 @@ const Style = styled.div`
   }
   .container-content {
     .content {
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: end;
@@ -41,6 +42,22 @@ const Style = styled.div`
       }
       .custom-preview-mask {
         border-radius: 10px;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 60vh;
+  }
+  @media screen and (max-width: 767px) {
+    height: auto;
+    .container-content {
+      display: block;
+      .card-image {
+        width: 100%;
+      }
+      .content {
+        width: 100%;
+        margin-top: 1em;
       }
     }
   }

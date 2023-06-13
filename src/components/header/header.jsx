@@ -3,7 +3,6 @@ import { Layout, Space } from "antd";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Style from "./style";
 const Header = () => {
-  console.log(SectionHome);
   const NavItem = (to, title, options) => {
     let { onClick, icon } = options || {};
     return (

@@ -40,7 +40,7 @@ const Project = () => {
       </div>
       <List
         className="list-card"
-        grid={{ gutter: 16, column: 4 }}
+        grid={{ gutter: 16, column: 4, xs: 1, sm: 2, md: 2, lg: 4, xl: 4 }}
         dataSource={data}
         renderItem={(item) => (
           <List.Item

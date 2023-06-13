@@ -23,5 +23,21 @@ const Style = styled.div`
       /* height: 3em; */
     }
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: auto;
+  }
+  @media screen and (max-width: 767px) {
+    height: auto;
+    .container-content {
+      display: block;
+      .card-image {
+        width: 100%;
+      }
+      .content {
+        width: 100%;
+        margin-top: 1em;
+      }
+    }
+  }
 `;
 export default Style;

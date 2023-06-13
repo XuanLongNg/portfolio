@@ -17,13 +17,18 @@ const Home = () => {
   return (
     <Style id={SectionHome.HOME} className="d-flex flex-row">
       <div className="content d-flex flex-column">
-        <Avatar style={{ marginBottom: "1em" }} src={avatar} size="large" />
-        <a className="title" href="https://git.io/typing-svg">
+        <Avatar
+          className="avatar"
+          style={{ marginBottom: "1em" }}
+          src={avatar}
+          size="large"
+        />
+        <div className="title">
           <img
             src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=4000&pause=500&color=2DB7F5&width=435&lines=Hi%2C+I'm+Long.;You+wanna+find+me.;+Check+it+out."
             alt="Typing SVG"
           />
-        </a>
+        </div>
         <p className="introduce">{introduction}</p>
 
         <div className="container-icon d-flex">

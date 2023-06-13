@@ -39,5 +39,44 @@ const Style = styled.div`
       width: 40%;
     }
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* .container {
+      height: 60vh;
+    } */
+  }
+  @media screen and (max-width: 767px) {
+    height: auto;
+    .container-title {
+      .title-divider {
+        margin-bottom: 10px;
+      }
+    }
+    .container {
+      width: 100%;
+      .animation {
+        height: 300px;
+        width: 100%;
+      }
+      .send-message {
+        .icon-email {
+          font-size: 2em;
+        }
+        .form-send-message {
+          margin-top: 1em;
+          .btn-send {
+            background-color: ${colors.light_blue};
+            color: ${colors.main_text_color};
+            transition: background-color 0.4 ease;
+          }
+          .btn-send:hover {
+            background-color: ${colors.main_text_color};
+            color: ${colors.light_blue};
+          }
+        }
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 `;
 export default Style;

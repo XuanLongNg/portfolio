@@ -10,5 +10,11 @@ const Style = styled(Footer)`
   h5 {
     color: ${colors.light_blue};
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 20vh;
+  }
+  @media screen and (max-width: 767px) {
+    height: 200px;
+  }
 `;
 export default Style;
