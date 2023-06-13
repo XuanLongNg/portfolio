@@ -14,7 +14,10 @@ const Style = styled(Footer)`
     height: 20vh;
   }
   @media screen and (max-width: 767px) {
-    height: 200px;
+    height: 20vh;
+    h5 {
+      font-size: 18px;
+    }
   }
 `;
 export default Style;
