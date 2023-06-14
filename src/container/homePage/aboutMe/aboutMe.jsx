@@ -12,23 +12,7 @@ const image =
   "https://firebasestorage.googleapis.com/v0/b/web-chat-neil.appspot.com/o/09328b69-10c8-410c-b03c-2518e32318b9_beluga.jpg?alt=media&token=a813bd79-d9cd-4017-ae34-22b4aa8abd51";
 
 const AboutMe = () => {
-  const viewPort = useViewport();
-  const [device, setDevice] = useState(
-    viewPort.width < 768
-      ? "mobile"
-      : viewPort.width >= 768 && viewPort.width <= 1024
-      ? "tablet"
-      : "desktop"
-  );
-  useEffect(() => {
-    setDevice(
-      viewPort.width < 768
-        ? "mobile"
-        : viewPort.width >= 768 && viewPort.width <= 1024
-        ? "tablet"
-        : "desktop"
-    );
-  }, [viewPort.width]);
+  const { isMobile, isTablet, isDesktop } = useViewport();
   const renderPc = (
     <div className="d-flex justify-content-around container-content">
       <div
@@ -61,7 +45,7 @@ const AboutMe = () => {
         data-aos="fade-down"
         data-aos-duration="5000"
         data-aos-easing="ease-in-out"
-        //   data-aos-anchor-placement="top-bottom"
+        data-aos-anchor-placement="top-bottom"
       >
         <Image height={"300px"} src={avatar} preview={false} />
       </div>
@@ -84,8 +68,8 @@ const AboutMe = () => {
       <div className="container-title">
         <Divider className="title-divider">About me</Divider>
       </div>
-      {device === "mobile" && renderMobile}
-      {(device === "desktop" || device === "tablet") && renderPc}
+      {isMobile && renderMobile}
+      {(isTablet || isDesktop) && renderPc}
     </Style>
   );
 };

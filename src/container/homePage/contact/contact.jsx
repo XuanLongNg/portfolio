@@ -11,23 +11,8 @@ const description =
   "I'm available for freelance work. Connect with me via the social networking sites or by email below. If you have a question or want to say hi, please fill in the form below and submit it, I'll try my best to get back to you!";
 const email = "ngxuanlong2002@gmail.com";
 const Contact = () => {
-  const viewPort = useViewport();
-  const [device, setDevice] = useState(
-    viewPort.width < 768
-      ? "mobile"
-      : viewPort.width >= 768 && viewPort.width <= 1024
-      ? "tablet"
-      : "desktop"
-  );
-  useEffect(() => {
-    setDevice(
-      viewPort.width < 768
-        ? "mobile"
-        : viewPort.width >= 768 && viewPort.width <= 1024
-        ? "tablet"
-        : "desktop"
-    );
-  }, [viewPort.width]);
+  const { isMobile, isTablet, isDesktop } = useViewport();
+
   const renderPc = (
     <div className="d-flex container">
       <div className="animation">
@@ -111,8 +96,8 @@ const Contact = () => {
       <div className="container-title">
         <Divider className="title-divider">Contact me</Divider>
       </div>
-      {(device === "desktop" || device === "tablet") && renderPc}
-      {device === "mobile" && renderMobile}
+      {isMobile && renderMobile}
+      {(isTablet || isDesktop) && renderPc}
     </Style>
   );
 };

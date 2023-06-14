@@ -61,10 +61,6 @@ const Style = styled.div`
       padding: 10%;
       margin-top: 150px;
     }
-    .card-image,
-    .avatar {
-      display: none;
-    }
   }
 `;
 export default Style;

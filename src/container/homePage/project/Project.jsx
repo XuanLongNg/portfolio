@@ -34,17 +34,8 @@ const Project = () => {
       technical: ["ReactJs", "ExpressJs", "MySql"],
     },
   ]);
-  const viewPort = useViewport();
-  const [device, setDevice] = useState();
-  useEffect(() => {
-    setDevice(
-      viewPort.width < 768
-        ? "mobile"
-        : viewPort.width >= 768 && viewPort.width <= 1024
-        ? "tablet"
-        : "desktop"
-    );
-  }, [viewPort.width]);
+  const { isMobile, isTablet, isDesktop } = useViewport();
+
   return (
     <Style id={SectionHome.PROJECT}>
       <div className="container-title">

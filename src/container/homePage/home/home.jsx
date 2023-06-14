@@ -16,26 +16,19 @@ import useViewport from "../../../hooks/useViewport";
 const introduction =
   "Welcome to my landing page! I'm a budding web developer with a strong desire to learn and grow in this fast-paced field. Although I may not have professional experience yet, I am dedicated to developing my front-end and back-end development abilities. I am eager to work on exciting projects and gain hands-on experience. Let's connect and explore the possibilities of working together!";
 const Home = () => {
-  const viewPort = useViewport();
-  const [device, setDevice] = useState();
-  useEffect(() => {
-    setDevice(
-      viewPort.width < 768
-        ? "mobile"
-        : viewPort.width >= 768 && viewPort.width <= 1024
-        ? "tablet"
-        : "desktop"
-    );
-  }, [viewPort.width]);
+  const { isMobile, isTablet, isDesktop } = useViewport();
+
   return (
     <Style id={SectionHome.HOME} className="d-flex flex-row">
       <div className="content d-flex flex-column">
-        <Avatar
-          className="avatar"
-          style={{ marginBottom: "1em" }}
-          src={avatar}
-          size="large"
-        />
+        {(isTablet || isDesktop) && (
+          <Avatar
+            className="avatar"
+            style={{ marginBottom: "1em" }}
+            src={avatar}
+            size="large"
+          />
+        )}
         <div className="title">
           <img
             src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=4000&pause=500&color=2DB7F5&width=435&lines=Hi%2C+I'm+Long.;You+wanna+find+me.;+Check+it+out."
@@ -88,9 +81,11 @@ const Home = () => {
           </motion.a>
         </div>
       </div>
-      <div className="card-image">
-        <Rive src={riveAnimation} />
-      </div>
+      {(isTablet || isDesktop) && (
+        <div className="card-image">
+          <Rive src={riveAnimation} />
+        </div>
+      )}
     </Style>
   );
 };
