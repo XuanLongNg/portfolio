@@ -2,9 +2,8 @@ import styled from "styled-components";
 import colors from "../../../styles/colors";
 
 const Style = styled.div`
-  height: 80vh;
   width: 80%;
-  margin: auto;
+  margin: 0 auto 10vh;
   .title-divider {
     font-size: 2em;
     border-color: ${colors.main_text_color};

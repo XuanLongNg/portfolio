@@ -20,6 +20,9 @@ const Style = styled.div`
       width: 60%;
     }
     .send-message {
+      .description {
+        text-align: justify;
+      }
       .icon-email {
         font-size: 2em;
       }
@@ -39,44 +42,49 @@ const Style = styled.div`
       width: 40%;
     }
   }
-  @media screen and (min-width: 480.5px) and (max-width: 768px) {
-    /* .container {
-      height: 60vh;
-    } */
-  }
-  @media screen and (max-width: 480px) {
-    height: auto;
-    .container-title {
-      .title-divider {
-        margin-bottom: 10px;
-      }
+`;
+export default Style;
+
+export const StyleMobile = styled.div`
+  height: auto;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 5em;
+  .container-title {
+    .title-divider {
+      font-size: 2em;
+      border-color: ${colors.main_text_color};
+      color: ${colors.main_text_color};
+      margin-bottom: 10px;
     }
-    .container {
+  }
+  .container {
+    width: 100%;
+    .animation {
+      height: 300px;
       width: 100%;
-      .animation {
-        height: 300px;
-        width: 100%;
+    }
+    .send-message {
+      .description {
+        text-align: justify;
       }
-      .send-message {
-        .icon-email {
-          font-size: 2em;
-        }
-        .form-send-message {
-          margin-top: 1em;
-          .btn-send {
-            background-color: ${colors.light_blue};
-            color: ${colors.main_text_color};
-            transition: background-color 0.4 ease;
-          }
-          .btn-send:hover {
-            background-color: ${colors.main_text_color};
-            color: ${colors.light_blue};
-          }
-        }
-        display: block;
-        width: 100%;
+      .icon-email {
+        font-size: 2em;
       }
+      .form-send-message {
+        margin-top: 1em;
+        .btn-send {
+          background-color: ${colors.light_blue};
+          color: ${colors.main_text_color};
+          transition: background-color 0.4 ease;
+        }
+        .btn-send:hover {
+          background-color: ${colors.main_text_color};
+          color: ${colors.light_blue};
+        }
+      }
+      display: block;
+      width: 100%;
     }
   }
 `;
-export default Style;
