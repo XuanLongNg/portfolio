@@ -39,7 +39,7 @@ const Style = styled.div`
       width: 40%;
     }
   }
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 480.5px) and (max-width: 768px) {
     /* .container {
       height: 60vh;
     } */

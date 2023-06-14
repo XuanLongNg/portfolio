@@ -1,5 +1,5 @@
 import { SectionHome } from "../../../configs/constant";
-import Style from "./style";
+import Style, { StyleMobile } from "./style";
 import { Divider, Image } from "antd";
 import avatar from "../../../assets/z4072164143770_71972f838b03628554f12dff4cfb6d44.jpg";
 import useViewport from "../../../hooks/useViewport";
@@ -14,63 +14,71 @@ const image =
 const AboutMe = () => {
   const { isMobile, isTablet, isDesktop } = useViewport();
   const renderPc = (
-    <div className="d-flex justify-content-around container-content">
-      <div
-        className="card-image"
-        data-aos="fade-down"
-        data-aos-duration="5000"
-        data-aos-easing="ease-in-out"
-        //   data-aos-anchor-placement="top-bottom"
-      >
-        <Image height={"300px"} src={avatar} preview={false} />
-      </div>
-      <div
-        className="content"
-        data-aos="fade-down"
-        data-aos-duration="5000"
-        data-aos-easing="ease-in-out"
-        data-aos-anchor-placement="top-bottom"
-      >
-        <h2 className="title">Long Nguyen Xuan</h2>
-        <p>
-          {introduction} <br /> {goal}
-        </p>
-      </div>
-    </div>
-  );
-  const renderMobile = (
-    <div className="container-content">
-      <div
-        className="card-image"
-        data-aos="fade-down"
-        data-aos-duration="5000"
-        data-aos-easing="ease-in-out"
-        data-aos-anchor-placement="top-bottom"
-      >
-        <Image height={"300px"} src={avatar} preview={false} />
-      </div>
-      <div
-        className="content"
-        data-aos="fade-down"
-        data-aos-duration="5000"
-        data-aos-easing="ease-in-out"
-        data-aos-anchor-placement="top-bottom"
-      >
-        <h2 className="title">Long Nguyen Xuan</h2>
-        <p>
-          {introduction} <br /> {goal}
-        </p>
-      </div>
-    </div>
-  );
-  return (
     <Style id={SectionHome.ABOUT}>
       <div className="container-title">
         <Divider className="title-divider">About me</Divider>
       </div>
+
+      <div className="d-flex justify-content-around container-content">
+        <div
+          className="card-image"
+          data-aos="fade-down"
+          data-aos-duration="5000"
+          data-aos-easing="ease-in-out"
+          //   data-aos-anchor-placement="top-bottom"
+        >
+          <Image height={"300px"} src={avatar} preview={false} />
+        </div>
+        <div
+          className="content"
+          data-aos="fade-down"
+          data-aos-duration="5000"
+          data-aos-easing="ease-in-out"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <h2 className="title">Long Nguyen Xuan</h2>
+          <p>
+            {introduction} <br /> {goal}
+          </p>
+        </div>
+      </div>
+    </Style>
+  );
+  const renderMobile = (
+    <StyleMobile id={SectionHome.ABOUT}>
+      <div className="container-title">
+        <Divider className="title-divider">About me</Divider>
+      </div>
+      <div className="container-content">
+        <div
+          className="card-image"
+          data-aos="fade-down"
+          data-aos-duration="5000"
+          data-aos-easing="ease-in-out"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <Image height={"300px"} src={avatar} preview={false} />
+        </div>
+        <div
+          className="content"
+          data-aos="fade-down"
+          data-aos-duration="5000"
+          data-aos-easing="ease-in-out"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <h2 className="title">Long Nguyen Xuan</h2>
+          <p>
+            {introduction} <br /> {goal}
+          </p>
+        </div>
+      </div>
+    </StyleMobile>
+  );
+  return (
+    <div>
       {isMobile && renderMobile}
       {(isTablet || isDesktop) && renderPc}
-    </Style>
+    </div>
   );
 };
 export default AboutMe;

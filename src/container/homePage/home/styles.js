@@ -51,7 +51,7 @@ const Style = styled.div`
       border-radius: 10px;
     }
   }
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 480.5px) and (max-width: 768px) {
     height: auto;
   }
   @media screen and (max-width: 480px) {
