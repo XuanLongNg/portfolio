@@ -39,12 +39,12 @@ const Style = styled.div`
       width: 40%;
     }
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  @media screen and (min-width: 480px) and (max-width: 768px) {
     /* .container {
       height: 60vh;
     } */
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 480px) {
     height: auto;
     .container-title {
       .title-divider {

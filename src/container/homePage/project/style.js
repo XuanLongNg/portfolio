@@ -33,10 +33,10 @@ const Style = styled.div`
       /* height: 3em; */
     }
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  @media screen and (min-width: 480px) and (max-width: 768px) {
     height: auto;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 480px) {
     height: auto;
     .container-content {
       display: block;
