@@ -10,10 +10,23 @@ import Rive from "rive-react";
 import riveAnimation from "../../../assets/astronaut_final.riv";
 import avatar from "../../../assets/z4072164143770_71972f838b03628554f12dff4cfb6d44.jpg";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import useViewport from "../../../hooks/useViewport";
 
 const introduction =
   "Welcome to my landing page! I'm a budding web developer with a strong desire to learn and grow in this fast-paced field. Although I may not have professional experience yet, I am dedicated to developing my front-end and back-end development abilities. I am eager to work on exciting projects and gain hands-on experience. Let's connect and explore the possibilities of working together!";
 const Home = () => {
+  const viewPort = useViewport();
+  const [device, setDevice] = useState();
+  useEffect(() => {
+    setDevice(
+      viewPort.width < 768
+        ? "mobile"
+        : viewPort.width >= 768 && viewPort.width <= 1024
+        ? "tablet"
+        : "desktop"
+    );
+  }, [viewPort.width]);
   return (
     <Style id={SectionHome.HOME} className="d-flex flex-row">
       <div className="content d-flex flex-column">

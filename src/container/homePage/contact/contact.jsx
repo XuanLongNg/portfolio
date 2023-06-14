@@ -6,7 +6,7 @@ import Rive from "rive-react";
 import riveAnimation from "../../../assets/astronaut_with_moon_final.riv";
 import { MailOutlined } from "@ant-design/icons";
 import useViewport from "../../../hooks/useViewport";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const description =
   "I'm available for freelance work. Connect with me via the social networking sites or by email below. If you have a question or want to say hi, please fill in the form below and submit it, I'll try my best to get back to you!";
 const email = "ngxuanlong2002@gmail.com";
@@ -19,6 +19,15 @@ const Contact = () => {
       ? "tablet"
       : "desktop"
   );
+  useEffect(() => {
+    setDevice(
+      viewPort.width < 768
+        ? "mobile"
+        : viewPort.width >= 768 && viewPort.width <= 1024
+        ? "tablet"
+        : "desktop"
+    );
+  }, [viewPort.width]);
   const renderPc = (
     <div className="d-flex container">
       <div className="animation">

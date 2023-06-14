@@ -3,7 +3,7 @@ import Style from "./style";
 import { Divider, Image } from "antd";
 import avatar from "../../../assets/z4072164143770_71972f838b03628554f12dff4cfb6d44.jpg";
 import useViewport from "../../../hooks/useViewport";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const introduction =
   "Hi there, I'm Long. I'm a 3rd year student at the Institute of Posts and Telecommunications Technology. I got interested in Web Development, and I am trying to learn and become a Web Developer. Currently, I am working at Code Mely - an IT community in Vietnam.";
 const goal =
@@ -20,7 +20,15 @@ const AboutMe = () => {
       ? "tablet"
       : "desktop"
   );
-
+  useEffect(() => {
+    setDevice(
+      viewPort.width < 768
+        ? "mobile"
+        : viewPort.width >= 768 && viewPort.width <= 1024
+        ? "tablet"
+        : "desktop"
+    );
+  }, [viewPort.width]);
   const renderPc = (
     <div className="d-flex justify-content-around container-content">
       <div
@@ -76,8 +84,8 @@ const AboutMe = () => {
       <div className="container-title">
         <Divider className="title-divider">About me</Divider>
       </div>
-      {(device === "desktop" || device === "tablet") && renderPc}
       {device === "mobile" && renderMobile}
+      {(device === "desktop" || device === "tablet") && renderPc}
     </Style>
   );
 };
