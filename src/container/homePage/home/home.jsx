@@ -1,4 +1,4 @@
-import { Avatar, Card, Image, Typography } from "antd";
+import { Avatar, Button, Card, Image, Typography } from "antd";
 import Style, { StyleMobile } from "./styles";
 import {
   GithubOutlined,
@@ -12,7 +12,8 @@ import avatar from "../../../assets/z4072164143770_71972f838b03628554f12dff4cfb6
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import useViewport from "../../../hooks/useViewport";
-
+const url_cv =
+  "https://firebasestorage.googleapis.com/v0/b/web-chat-neil.appspot.com/o/Nguyen-Xuan-Long-TopCV.vn-150623.15528.pdf?alt=media&token=8ee34109-2865-495a-973a-b925ca3f1133";
 const introduction =
   "Welcome to my landing page! I'm a budding web developer with a strong desire to learn and grow in this fast-paced field. Although I may not have professional experience yet, I am dedicated to developing my front-end and back-end development abilities. I am eager to work on exciting projects and gain hands-on experience. Let's connect and explore the possibilities of working together!";
 const Home = () => {
@@ -76,6 +77,11 @@ const Home = () => {
             <LinkedinFilled className="icon-social" />
           </motion.a>
         </div>
+        <a href={url_cv}>
+          <Button type="primary" className="btn-get-cv">
+            Get my cv
+          </Button>
+        </a>
       </div>
 
       <div className="card-image">
@@ -93,7 +99,11 @@ const Home = () => {
           />
         </div>
         <p className="introduce">{introduction}</p>
-
+        <a href={url_cv}>
+          <Button type="primary" className="btn-get-cv">
+            Get my cv
+          </Button>
+        </a>
         <div className="container-icon d-flex">
           <motion.a
             href="https://github.com/XuanLongNg"
@@ -136,7 +146,7 @@ const Home = () => {
     </StyleMobile>
   );
   return (
-    <div id={SectionHome.HOME}>
+    <div style={{ minHeight: "300px" }} id={SectionHome.HOME}>
       {isMobile && renderMobile}
       {(isTablet || isDesktop) && renderPc}
     </div>

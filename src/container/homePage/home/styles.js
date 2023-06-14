@@ -28,6 +28,16 @@ const Style = styled.div`
         /* width: 2em; */
       }
     }
+    .btn-get-cv {
+      margin-top: 1em;
+      background-color: ${colors.light_blue};
+      color: ${colors.main_text_color};
+      transition: background-color 0.4 ease;
+    }
+    .btn-get-cv:hover {
+      background-color: ${colors.main_text_color};
+      color: ${colors.light_blue};
+    }
   }
   .card-image {
     width: 50%;
@@ -81,6 +91,17 @@ export const StyleMobile = styled.div`
         margin-right: 1em;
         /* width: 2em; */
       }
+    }
+    .btn-get-cv {
+      margin-bottom: 1em;
+      width: 100%;
+      background-color: ${colors.light_blue};
+      color: ${colors.main_text_color};
+      transition: background-color 0.4 ease;
+    }
+    .btn-get-cv:hover {
+      background-color: ${colors.main_text_color};
+      color: ${colors.light_blue};
     }
   }
   .card-image {
