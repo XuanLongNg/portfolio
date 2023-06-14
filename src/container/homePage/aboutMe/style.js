@@ -16,7 +16,7 @@ const Style = styled.div`
   .container-content {
     padding: 3em 0;
     .content {
-      width: 100%;
+      width: 60%;
       display: flex;
       flex-direction: column;
       justify-content: end;
