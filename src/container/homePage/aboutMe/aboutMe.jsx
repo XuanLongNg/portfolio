@@ -14,7 +14,7 @@ const image =
 const AboutMe = () => {
   const { isMobile, isTablet, isDesktop } = useViewport();
   const renderPc = (
-    <Style id={SectionHome.ABOUT}>
+    <Style>
       <div className="container-title">
         <Divider className="title-divider">About me</Divider>
       </div>
@@ -45,7 +45,7 @@ const AboutMe = () => {
     </Style>
   );
   const renderMobile = (
-    <StyleMobile id={SectionHome.ABOUT}>
+    <StyleMobile>
       <div className="container-title">
         <Divider className="title-divider">About me</Divider>
       </div>
@@ -75,7 +75,7 @@ const AboutMe = () => {
     </StyleMobile>
   );
   return (
-    <div>
+    <div id={SectionHome.ABOUT}>
       {isMobile && renderMobile}
       {(isTablet || isDesktop) && renderPc}
     </div>

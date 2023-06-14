@@ -18,7 +18,7 @@ const introduction =
 const Home = () => {
   const { isMobile, isTablet, isDesktop } = useViewport();
   const renderPc = (
-    <Style id={SectionHome.HOME} className="d-flex flex-row">
+    <Style className="d-flex flex-row">
       <div className="content d-flex flex-column">
         <Avatar
           className="avatar"
@@ -84,7 +84,7 @@ const Home = () => {
     </Style>
   );
   const renderMobile = (
-    <StyleMobile id={SectionHome.HOME} className="d-flex flex-row">
+    <StyleMobile className="d-flex flex-row">
       <div className="content d-flex flex-column">
         <div className="title">
           <img
@@ -136,7 +136,7 @@ const Home = () => {
     </StyleMobile>
   );
   return (
-    <div>
+    <div id={SectionHome.HOME}>
       {isMobile && renderMobile}
       {(isTablet || isDesktop) && renderPc}
     </div>

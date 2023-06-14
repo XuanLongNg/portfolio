@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import colors from "../../../styles/colors";
 const Style = styled.div`
-  /* margin-top: 5em; */
   width: 100%;
   height: 100vh;
   padding: 5em 0;
-  /* height: 10000px; */
   background-color: ${colors.main_bg_color};
   .content {
     width: 50%;

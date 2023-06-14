@@ -4,6 +4,8 @@ import colors from "../../../styles/colors";
 const Style = styled.div`
   width: 80%;
   margin: 0 auto 10vh;
+  height: auto;
+
   .title-divider {
     font-size: 2em;
     border-color: ${colors.main_text_color};
@@ -28,23 +30,6 @@ const Style = styled.div`
             margin: 2px;
           }
         }
-      }
-      /* height: 3em; */
-    }
-  }
-  @media screen and (min-width: 480.5px) and (max-width: 768px) {
-    height: auto;
-  }
-  @media screen and (max-width: 480px) {
-    height: auto;
-    .container-content {
-      display: block;
-      .card-image {
-        width: 100%;
-      }
-      .content {
-        width: 100%;
-        margin-top: 1em;
       }
     }
   }

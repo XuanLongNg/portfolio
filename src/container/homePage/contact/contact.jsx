@@ -14,7 +14,7 @@ const Contact = () => {
   const { isMobile, isTablet, isDesktop } = useViewport();
 
   const renderPc = (
-    <Style id={SectionHome.CONTACT}>
+    <Style>
       <div className="container-title">
         <Divider className="title-divider">Contact me</Divider>
       </div>
@@ -59,7 +59,7 @@ const Contact = () => {
     </Style>
   );
   const renderMobile = (
-    <StyleMobile id={SectionHome.CONTACT}>
+    <StyleMobile>
       <div className="container-title">
         <Divider className="title-divider">Contact me</Divider>
       </div>
@@ -103,7 +103,7 @@ const Contact = () => {
     </StyleMobile>
   );
   return (
-    <div>
+    <div id={SectionHome.CONTACT}>
       {isMobile && renderMobile}
       {(isTablet || isDesktop) && renderPc}
     </div>

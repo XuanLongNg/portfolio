@@ -36,8 +36,8 @@ const Project = () => {
   ]);
   const { isMobile, isTablet, isDesktop } = useViewport();
 
-  return (
-    <Style id={SectionHome.PROJECT}>
+  const renderPc = (
+    <Style>
       <div className="container-title">
         <Divider className="title-divider">Project</Divider>
       </div>
@@ -69,6 +69,46 @@ const Project = () => {
         )}
       />
     </Style>
+  );
+  const renderMobile = (
+    <Style>
+      <div className="container-title">
+        <Divider className="title-divider">Project</Divider>
+      </div>
+      <List
+        className="list-card"
+        grid={{ gutter: 16, column: 4, xs: 1, sm: 2, md: 2, lg: 4, xl: 4 }}
+        dataSource={data}
+        renderItem={(item) => (
+          <List.Item
+            className="item"
+            data-aos="fade-down"
+            data-aos-easing="ease-in-out"
+          >
+            <a className="card" href={item.link}>
+              <Card title={item.title}>
+                <p className="description">{item.description}</p>
+                <div className="tag-icon">
+                  {item.technical.map((item) => {
+                    return (
+                      <Tag className="tag-name" color="#2db7f5">
+                        {item}
+                      </Tag>
+                    );
+                  })}
+                </div>
+              </Card>
+            </a>
+          </List.Item>
+        )}
+      />
+    </Style>
+  );
+  return (
+    <div id={SectionHome.PROJECT}>
+      {isMobile && renderMobile}
+      {(isTablet || isDesktop) && renderPc}
+    </div>
   );
 };
 export default Project;
