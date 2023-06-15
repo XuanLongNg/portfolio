@@ -2,7 +2,6 @@ import emailjs from "emailjs-com";
 
 const sendEmail = async ({ email, name, subject, message }) => {
   try {
-    console.log(email, name, subject, message);
     const templateParams = {
       subject: subject,
       name: name,
@@ -17,6 +16,7 @@ const sendEmail = async ({ email, name, subject, message }) => {
       process.env["REACT_APP_EMAIL_USER_ID"]
     );
     console.log("Email sent successfully:", response.text);
+
     return true;
   } catch (error) {
     console.error("Error sending email:", error);
