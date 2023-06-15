@@ -9,7 +9,7 @@ const Style = styled.div`
   color: ${colors.main_text_color};
   .header {
     position: fixed;
-    z-index: 10000;
+    z-index: 100;
   }
 `;
 export default Style;
