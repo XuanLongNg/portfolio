@@ -16,12 +16,17 @@ const Contact = () => {
   const { isMobile, isTablet, isDesktop } = useViewport();
 
   const onFinish = async (value) => {
-    console.log(value);
-    sendEmail(value);
-    notification.success({
-      message: "Success!",
-      style: { zIndex: 1000, marginTop: "4em" },
-    });
+    const isSuccess = sendEmail(value);
+    if (isSuccess)
+      notification.success({
+        message: "Success!",
+        style: { zIndex: 1000, marginTop: "4em" },
+      });
+    else
+      notification.error({
+        message: "Server error!",
+        style: { zIndex: 1000, marginTop: "4em" },
+      });
   };
   const renderPc = (
     <Style>

@@ -11,10 +11,10 @@ const sendEmail = async ({ email, name, subject, message }) => {
     };
 
     const response = await emailjs.send(
-      "service_r4kp0pm",
-      "template_dnk02du",
+      process.env["REACT_APP_EMAIL_SERVICES_ID"],
+      process.env["REACT_APP_EMAIL_TEMPLATE_ID"],
       templateParams,
-      "L0aJcs1Cg1RPfE7z8"
+      process.env["REACT_APP_EMAIL_USER_ID"]
     );
     console.log("Email sent successfully:", response.text);
     return true;
