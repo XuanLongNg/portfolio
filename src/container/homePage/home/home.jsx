@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import useViewport from "../../../hooks/useViewport";
 const url_cv =
-  "https://firebasestorage.googleapis.com/v0/b/web-chat-neil.appspot.com/o/Nguyen-Xuan-Long-TopCV.vn-150623.15528.pdf?alt=media&token=8ee34109-2865-495a-973a-b925ca3f1133";
+  "https://firebasestorage.googleapis.com/v0/b/web-chat-neil.appspot.com/o/CV%20-%20Long%20Nguyen%20Xuan.pdf?alt=media&token=6fd0d231-4d60-4d73-8c79-90d624dfb228";
 const introduction =
   "Welcome to my landing page! I'm a budding web developer with a strong desire to learn and grow in this fast-paced field. Although I may not have professional experience yet, I am dedicated to developing my front-end and back-end development abilities. I am eager to work on exciting projects and gain hands-on experience. Let's connect and explore the possibilities of working together!";
 const Home = () => {
@@ -63,7 +63,7 @@ const Home = () => {
             <FacebookFilled className="icon-social" />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/long-nguyen-35172623b/"
+            href="https://www.linkedin.com/in/ng-xuan-long/"
             target="_blank"
             style={{
               color: "white",
