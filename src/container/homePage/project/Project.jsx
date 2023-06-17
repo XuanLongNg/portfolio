@@ -3,6 +3,7 @@ import Style from "./style";
 import { SectionHome } from "../../../configs/constant";
 import { useEffect, useState } from "react";
 import useViewport from "../../../hooks/useViewport";
+import { motion } from "framer-motion";
 
 const Project = () => {
   const [data, setData] = useState([
@@ -46,26 +47,32 @@ const Project = () => {
         grid={{ gutter: 16, column: 4, xs: 1, sm: 2, md: 2, lg: 4, xl: 4 }}
         dataSource={data}
         renderItem={(item) => (
-          <List.Item
-            className="item"
-            data-aos="fade-down"
-            data-aos-easing="ease-in-out"
+          <motion.div
+            className="box"
+            whileHover={{ scale: [null, 0.9, 0.9] }}
+            transition={{ duration: 0.4 }}
           >
-            <a className="card" href={item.link}>
-              <Card title={item.title}>
-                <p className="description">{item.description}</p>
-                <div className="tag-icon">
-                  {item.technical.map((item) => {
-                    return (
-                      <Tag className="tag-name" color="#2db7f5">
-                        {item}
-                      </Tag>
-                    );
-                  })}
-                </div>
-              </Card>
-            </a>
-          </List.Item>
+            <List.Item
+              className="item"
+              data-aos="fade-down"
+              data-aos-easing="ease-in-out"
+            >
+              <a className="card" href={item.link}>
+                <Card title={item.title}>
+                  <p className="description">{item.description}</p>
+                  <div className="tag-icon">
+                    {item.technical.map((item) => {
+                      return (
+                        <Tag className="tag-name" color="#2db7f5">
+                          {item}
+                        </Tag>
+                      );
+                    })}
+                  </div>
+                </Card>
+              </a>
+            </List.Item>
+          </motion.div>
         )}
       />
     </Style>
@@ -80,32 +87,47 @@ const Project = () => {
         grid={{ gutter: 16, column: 4, xs: 1, sm: 2, md: 2, lg: 4, xl: 4 }}
         dataSource={data}
         renderItem={(item) => (
-          <List.Item
-            className="item"
-            data-aos="fade-down"
-            data-aos-easing="ease-in-out"
+          <motion.div
+            className="box"
+            whileHover={{ scale: [null, 0.9, 0.9] }}
+            transition={{ duration: 0.4 }}
           >
-            <a className="card" href={item.link}>
-              <Card title={item.title}>
-                <p className="description">{item.description}</p>
-                <div className="tag-icon">
-                  {item.technical.map((item) => {
-                    return (
-                      <Tag className="tag-name" color="#2db7f5">
-                        {item}
-                      </Tag>
-                    );
-                  })}
-                </div>
-              </Card>
-            </a>
-          </List.Item>
+            <List.Item
+              className="item"
+              data-aos="fade-down"
+              data-aos-easing="ease-in-out"
+            >
+              <a className="card" href={item.link}>
+                <Card title={item.title}>
+                  <p className="description">{item.description}</p>
+                  <div className="tag-icon">
+                    {item.technical.map((item) => {
+                      return (
+                        <Tag className="tag-name" color="#2db7f5">
+                          {item}
+                        </Tag>
+                      );
+                    })}
+                  </div>
+                </Card>
+              </a>
+            </List.Item>
+          </motion.div>
         )}
       />
     </Style>
   );
+  const Test = () => (
+    <motion.div
+      className="box"
+      whileHover={{ scale: [null, 1.5, 1.4] }}
+      transition={{ duration: 0.3 }}
+    >
+      Hello
+    </motion.div>
+  );
   return (
-    <div id={SectionHome.PROJECT}>
+    <div id={SectionHome.PROJECT} className="d-flex">
       {isMobile && renderMobile}
       {(isTablet || isDesktop) && renderPc}
     </div>

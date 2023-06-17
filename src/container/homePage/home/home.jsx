@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import useViewport from "../../../hooks/useViewport";
 const url_cv =
-  "https://firebasestorage.googleapis.com/v0/b/web-chat-neil.appspot.com/o/CV%20-%20Long%20Nguyen%20Xuan.pdf?alt=media&token=6fd0d231-4d60-4d73-8c79-90d624dfb228";
+  "https://firebasestorage.googleapis.com/v0/b/web-chat-neil.appspot.com/o/CV%20-%20Long%20Nguyen%20Xuan.pdf?alt=media&token=1b6eb0e6-4438-4d18-a42c-23583a69c5e4";
 const introduction =
   "Welcome to my landing page! I'm a budding web developer with a strong desire to learn and grow in this fast-paced field. Although I may not have professional experience yet, I am dedicated to developing my front-end and back-end development abilities. I am eager to work on exciting projects and gain hands-on experience. Let's connect and explore the possibilities of working together!";
 const Home = () => {
@@ -43,7 +43,7 @@ const Home = () => {
               color: "white",
               // backgroundColor: "gray",
             }}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.2, originX: 0, originY: 0 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             target="_blank"
@@ -55,7 +55,7 @@ const Home = () => {
             style={{
               color: "white",
             }}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.2, originX: 0, originY: 0 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             target="_blank"
@@ -67,21 +67,30 @@ const Home = () => {
             target="_blank"
             style={{
               color: "white",
-              // backgroundColor: "gray",
             }}
-            // className="icon-social box"
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.2, originX: 0, originY: 0 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <LinkedinFilled className="icon-social" />
           </motion.a>
         </div>
-        <a href={url_cv}>
+        <motion.a
+          className="motion-btn"
+          href={url_cv}
+          whileHover={{ scale: 1.2, originX: 0, originY: 0 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+            duration: 0.4,
+          }}
+        >
           <Button type="primary" className="btn-get-cv">
             Get my cv
           </Button>
-        </a>
+        </motion.a>
       </div>
 
       <div className="card-image">
@@ -99,11 +108,22 @@ const Home = () => {
           />
         </div>
         <p className="introduce">{introduction}</p>
-        <a href={url_cv}>
+        <motion.a
+          className="motion-btn"
+          href={url_cv}
+          whileHover={{ scale: 1.05, originX: 0, originY: 0 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+            duration: 0.4,
+          }}
+        >
           <Button type="primary" className="btn-get-cv">
             Get my cv
           </Button>
-        </a>
+        </motion.a>
         <div className="container-icon d-flex">
           <motion.a
             href="https://github.com/XuanLongNg"

@@ -6,7 +6,7 @@ import Rive from "rive-react";
 import riveAnimation from "../../../assets/astronaut_with_moon_final.riv";
 import { MailOutlined } from "@ant-design/icons";
 import useViewport from "../../../hooks/useViewport";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { RegexEmail } from "../../../utils/regexEmail";
 import sendEmail from "../../../utils/nodemail";
 const description =
@@ -86,9 +86,20 @@ const Contact = () => {
               <TextArea placeholder="Message" rows={4} />
             </Form.Item>
             <Form.Item className="d-flex flex-row-reverse">
-              <Button type="primary" className="btn-send" htmlType="submit">
-                Send messages
-              </Button>
+              <motion.div
+                whileHover={{ scale: 1.2, translate: "-10%" }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                  duration: 0.4,
+                }}
+              >
+                <Button type="primary" className="btn-send" htmlType="submit">
+                  Send messages
+                </Button>
+              </motion.div>
             </Form.Item>
           </Form>
         </div>

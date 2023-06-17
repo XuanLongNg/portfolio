@@ -17,6 +17,9 @@ const Style = styled.div`
     .item {
       .card {
         text-decoration: none;
+        .ant-card-head-title {
+          color: ${colors.main_bg_color};
+        }
         .ant-card {
           height: 20em;
         }

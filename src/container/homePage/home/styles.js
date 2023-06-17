@@ -28,15 +28,20 @@ const Style = styled.div`
         /* width: 2em; */
       }
     }
-    .btn-get-cv {
-      margin-top: 1em;
-      background-color: ${colors.light_blue};
-      color: ${colors.main_text_color};
-      transition: background-color 0.4 ease;
-    }
-    .btn-get-cv:hover {
-      background-color: ${colors.main_text_color};
-      color: ${colors.light_blue};
+    .motion-btn {
+      width: 20%;
+      min-width: 8em;
+      .btn-get-cv {
+        margin-bottom: 1em;
+        width: 100%;
+        background-color: ${colors.light_blue};
+        color: ${colors.main_text_color};
+        transition: background-color 0.4 ease;
+      }
+      .btn-get-cv:hover {
+        background-color: ${colors.main_text_color};
+        color: ${colors.light_blue};
+      }
     }
   }
   .card-image {
@@ -92,16 +97,21 @@ export const StyleMobile = styled.div`
         /* width: 2em; */
       }
     }
-    .btn-get-cv {
-      margin-bottom: 1em;
+    .motion-btn {
       width: 100%;
-      background-color: ${colors.light_blue};
-      color: ${colors.main_text_color};
-      transition: background-color 0.4 ease;
-    }
-    .btn-get-cv:hover {
-      background-color: ${colors.main_text_color};
-      color: ${colors.light_blue};
+      min-width: 8em;
+
+      .btn-get-cv {
+        margin-bottom: 1em;
+        width: 100%;
+        background-color: ${colors.light_blue};
+        color: ${colors.main_text_color};
+        transition: background-color 0.4 ease;
+      }
+      .btn-get-cv:hover {
+        background-color: ${colors.main_text_color};
+        color: ${colors.light_blue};
+      }
     }
   }
   .card-image {
