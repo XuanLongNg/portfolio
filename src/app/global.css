@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Fira Code", monospace !important;
+}
+:root {
+    --bg-primary: #111a2c;
+    --bg-secondary: #112545;
+    --text-primary: #ffffff;
+    --text-highlight: #2DB7F5;
+    --scroll-track: #0d1421;
+    --scroll-thumb: #b5b3b3;
+}
+
+[data-theme='light'] {
+    --bg-primary: #ffffff;
+    --text-primary: #000000;
+    --bg-secondary: #e89a3c;
+    --text-highlight: #d84a1b;
+    --scroll-track: #fae3b7;
+    --scroll-thumb: #e89a3c;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    position: fixed;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--scroll-track);
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    font-size: 16px;
+    text-decoration: none;
+}

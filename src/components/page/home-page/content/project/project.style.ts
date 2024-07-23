@@ -1,45 +1,57 @@
 import styled from "styled-components";
-import {COLOR_MAIN_BG, COLOR_MAIN_TEXT} from "@/common/constants/colors.constant";
 
 const ProjectStyle = styled.div`
-    width: 80%;
-    margin: 0 auto 10vh;
-    height: auto;
+  width: 80%;
+  margin: 0 auto 10vh;
+  height: auto;
 
-    .title-divider {
-        font-size: 2em;
-        border-color: ${COLOR_MAIN_TEXT};
-        color: ${COLOR_MAIN_TEXT};
+  .slider {
+    .box {
+      padding: 0 2em;
+      min-height: 50vh;
 
-        margin-bottom: 100px;
-    }
+      .text-group {
+        min-height: 40vh;
 
-    .list-card {
-        .item {
-            .card {
-                text-decoration: none;
-
-                .ant-card-head-title {
-                    color: ${COLOR_MAIN_BG};
-                }
-
-                .ant-card {
-                    height: 20em;
-                }
-
-                .description {
-                    overflow: hidden;
-                    max-height: 9em;
-                    margin-bottom: 0.5em;
-                }
-
-                .tag-icon {
-                    .tag-name {
-                        margin: 2px;
-                    }
-                }
-            }
+        .title-card {
+          color: var(--text-primary);
         }
+        .title-description {
+          color: var(--text-primary);
+        }
+        .btn-redirect {
+          width: 8em;
+        }
+        .tag-icon {
+          width: 100%;
+        }
+      }
+      .image-group {
+        position: relative;
+        width: 100%;
+        .image-bg {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 40vh;
+          max-width: 30vw;
+          min-width: 280px;
+        }
+        .ant-image {
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          .image-project {
+            height: 40vh;
+            width: auto;
+            max-width: 30vw;
+            min-width: 280px;
+          }
+        }
+      }
     }
+  }
 `;
 export default ProjectStyle;
