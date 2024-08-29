@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Layout } from "antd";
+import { responsiveConstant } from "@/common/constants/responsive.constant";
 
 const { Header } = Layout;
 const HeaderStyle = styled(Header)`
@@ -34,13 +35,13 @@ const HeaderStyle = styled(Header)`
     }
   }
 
-  //
-  // @media screen and (min-width: 768px) and (max-width: 1024px) {
-  //     .header {
-  //         width: 80%;
-  //         height: 4em;
-  //     }
-  // }
+  @media screen and (min-width: ${responsiveConstant.tablet
+      .min}px) and (max-width: ${responsiveConstant.tablet.max}px) {
+    .header {
+      width: 80%;
+      height: 4em;
+    }
+  }
   // @media screen and (max-width: 767px) {
   //     .header {
   //         width: 100%;

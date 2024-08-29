@@ -8,9 +8,11 @@ import useScrollPosition from "@/hooks/common/useScrollPosition";
 import clsx from "clsx";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { MoonOutlined, SunOutlined } from "@ant-design/icons";
+import { MenuOutlined, MoonOutlined, SunOutlined } from "@ant-design/icons";
 import Button from "@/components/common/button/Button";
 import React from "react";
+import useViewport from "@/hooks/common/useViewPort";
+import { EResponsive } from "@/common/enums/responsive.enum";
 
 export interface INavItem {
   value: ESectionHome;
@@ -39,6 +41,7 @@ const navItems: INavItem[] = [
 const Header = () => {
   const scroll = useScrollPosition();
   const { theme, setTheme } = useTheme();
+  const { view } = useViewport();
   const handleChangeTheme = () => {
     if (theme === "dark") setTheme("light");
     else setTheme("dark");
@@ -72,6 +75,7 @@ const Header = () => {
           {navItems.map((item) => {
             return (
               <Link
+                key={item.value}
                 activeClass="active"
                 smooth={true}
                 offset={-100}
@@ -94,6 +98,7 @@ const Header = () => {
         >
           {theme === "dark" ? <SunOutlined /> : <MoonOutlined />}
         </Button>
+        {view === EResponsive.MOBILE && <MenuOutlined />}
       </motion.div>
     </HeaderStyle>
   );

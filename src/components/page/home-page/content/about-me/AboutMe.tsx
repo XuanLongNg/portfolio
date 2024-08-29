@@ -1,8 +1,6 @@
 "use client";
-import AboutMeStyle, {
-  AboutMeStyleMobile,
-} from "@/components/page/home-page/content/about-me/about-me.style";
-import { Col, Divider, Image, Row, Tag, Typography } from "antd";
+import AboutMeStyle from "@/components/page/home-page/content/about-me/about-me.style";
+import { Col, Image, Row, Tag, Typography } from "antd";
 import { ESectionHome } from "@/common/enums/section.enum";
 import useViewport from "@/hooks/common/useViewPort";
 import { useTheme } from "next-themes";
@@ -35,88 +33,57 @@ const skills: ISkillPreview[] = [
 ];
 
 const AboutMe = () => {
-  const { isMobile, isTablet, isDesktop } = useViewport();
   const { theme, setTheme } = useTheme();
+  const { view } = useViewport();
 
-  const renderPc = (
-    <AboutMeStyle>
-      <TitleDivider orientation={"left"}>About me</TitleDivider>
+  return (
+    <div id={ESectionHome.ABOUT}>
+      <AboutMeStyle>
+        <TitleDivider orientation={"left"}>About me</TitleDivider>
 
-      <Row className="d-flex container-content">
-        <Col
-          span={14}
-          className="content"
-          data-aos="fade-down"
-          data-aos-duration="5000"
-          data-aos-easing="ease-in-out"
-          data-aos-anchor-placement="top-bottom"
-        >
-          <Typography.Title level={2} className="title">
-            Long Nguyen Xuan
-          </Typography.Title>
-          <Typography.Text className={"text-introduce"}>
-            {introduction} <br /> {goal}
-            <br />
-            {skills.map((skill) => (
-              <Tag color={skill.color}>{skill.text}</Tag>
-            ))}
-          </Typography.Text>
-        </Col>
-        <Col span={10} className={"d-flex justify-content-center"}>
-          <div
-            className="card-image"
+        <Row className="d-flex container-content">
+          <Col
+            lg={14}
+            md={12}
+            className="content"
             data-aos="fade-down"
             data-aos-duration="5000"
             data-aos-easing="ease-in-out"
-            //   data-aos-anchor-placement="top-bottom"
+            data-aos-anchor-placement="top-bottom"
           >
-            <div className={"decor-image decor-1"}></div>
-            <div className={"decor-image decor-2"}></div>
-            <Image
-              height={"300px"}
-              width={"225px"}
-              src={"/assets/avatar.jpg"}
-              preview={false}
-            ></Image>
-          </div>
-        </Col>
-      </Row>
-    </AboutMeStyle>
-  );
-  const renderMobile = (
-    <AboutMeStyleMobile>
-      <div className="container-title">
-        <Divider className="title-divider">About me</Divider>
-      </div>
-      <div className="container-content">
-        <div
-          className="card-image"
-          data-aos="fade-down"
-          data-aos-duration="5000"
-          data-aos-easing="ease-in-out"
-          data-aos-anchor-placement="top-bottom"
-        >
-          <Image height={"300px"} src={"/assets/avatar.jpg"} preview={false} />
-        </div>
-        <div
-          className="content"
-          data-aos="fade-down"
-          data-aos-duration="5000"
-          data-aos-easing="ease-in-out"
-          data-aos-anchor-placement="top-bottom"
-        >
-          <h2 className="title">Long Nguyen Xuan</h2>
-          <p>
-            {introduction} <br /> {goal}
-          </p>
-        </div>
-      </div>
-    </AboutMeStyleMobile>
-  );
-  return (
-    <div id={ESectionHome.ABOUT}>
-      {isMobile && renderMobile}
-      {(isTablet || isDesktop) && renderPc}
+            <Typography.Title level={2} className="title">
+              Long Nguyen Xuan
+            </Typography.Title>
+            <Typography.Text className={"text-introduce"}>
+              {introduction} <br /> {goal}
+              <br />
+              {skills.map((skill) => (
+                <Tag key={skill.text} color={skill.color}>
+                  {skill.text}
+                </Tag>
+              ))}
+            </Typography.Text>
+          </Col>
+          <Col lg={10} md={12} className={"d-flex justify-content-center"}>
+            <div
+              className="card-image"
+              data-aos="fade-down"
+              data-aos-duration="5000"
+              data-aos-easing="ease-in-out"
+              //   data-aos-anchor-placement="top-bottom"
+            >
+              <div className={"decor-image decor-1"}></div>
+              <div className={"decor-image decor-2"}></div>
+              <Image
+                height={"300px"}
+                width={"225px"}
+                src={"/assets/avatar.jpg"}
+                preview={false}
+              ></Image>
+            </div>
+          </Col>
+        </Row>
+      </AboutMeStyle>
     </div>
   );
 };

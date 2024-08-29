@@ -1,48 +1,52 @@
 import { useEffect, useState } from "react";
+import { EResponsive } from "@/common/enums/responsive.enum";
+import { responsiveConstant } from "@/common/constants/responsive.constant";
 
 const useViewport = () => {
-    const [viewport, setViewport] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
-        isMobile: false,
-        isTablet: false,
-        isDesktop: false,
+  const [viewport, setViewport] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    view: EResponsive.DESKTOP,
+  });
+
+  const handleWindowResize = () => {
+    setViewport((prevState) => ({
+      ...prevState,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    }));
+  };
+
+  useEffect(() => {
+    handleWindowResize();
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const { width } = viewport;
+    let view;
+
+    Object.keys(responsiveConstant).map((key) => {
+      if (
+        width > responsiveConstant[key].min &&
+        width <= responsiveConstant[key].max
+      ) {
+        view = key;
+      }
     });
 
-    const handleWindowResize = () => {
-        setViewport((prevState) => ({
-            ...prevState,
-            width: window.innerWidth,
-            height: window.innerHeight,
-        }));
-    };
+    setViewport((prevState) => ({
+      ...prevState,
+      view,
+    }));
+  }, [viewport.width]);
 
-    useEffect(() => {
-        handleWindowResize(); // Lấy kích thước viewport ban đầu
-
-        window.addEventListener("resize", handleWindowResize);
-
-        return () => {
-            window.removeEventListener("resize", handleWindowResize);
-        };
-    }, []);
-
-    useEffect(() => {
-        const { width } = viewport;
-
-        const isMobile = width <= 480;
-        const isTablet = width > 480 && width <= 768;
-        const isDesktop = width > 768;
-
-        setViewport((prevState) => ({
-            ...prevState,
-            isMobile,
-            isTablet,
-            isDesktop,
-        }));
-    }, [viewport.width]);
-
-    return viewport;
+  return viewport;
 };
 
 export default useViewport;

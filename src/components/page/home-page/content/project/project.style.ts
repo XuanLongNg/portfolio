@@ -6,6 +6,14 @@ const ProjectStyle = styled.div`
   height: auto;
 
   .slider {
+    .slick-dots {
+      li {
+        background-color: black;
+      }
+      .slick-active button {
+        background-color: var(--text-highlight);
+      }
+    }
     .box {
       padding: 0 2em;
       min-height: 50vh;
