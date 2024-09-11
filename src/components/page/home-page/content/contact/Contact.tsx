@@ -130,7 +130,7 @@ const Contact = () => {
       </div>
       <div className=" container">
         <div className="animation">
-          <Rive src={"/assets/astronaut_with_moon_final.riv"} />
+          <Rive src={"/assets/pomodoro_design_variation.riv"} />
         </div>
         <div className="send-message">
           <p className="description">{description}</p>
@@ -191,8 +191,9 @@ const Contact = () => {
   );
   return (
     <div id={ESectionHome.CONTACT}>
-      {isMobile && renderMobile}
-      {(isTablet || isDesktop) && renderPc}
+      {renderPc}
+      {/*{isMobile && renderMobile}*/}
+      {/*{(isTablet || isDesktop) && renderPc}*/}
     </div>
   );
 };

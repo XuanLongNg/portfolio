@@ -33,6 +33,10 @@ const navItems: INavItem[] = [
     label: "Project",
   },
   {
+    value: ESectionHome.EXPERIENCE,
+    label: "Experience",
+  },
+  {
     value: ESectionHome.CONTACT,
     label: "Contact",
   },

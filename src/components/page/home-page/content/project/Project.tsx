@@ -8,34 +8,35 @@ import BlurImage from "@/components/common/Image/BlurImage/BlurImage";
 import Button from "@/components/common/button/Button";
 import { LinkOutlined } from "@ant-design/icons";
 import { mockProjects } from "@/mock/project";
+import Link from "next/link";
 
 const { Meta } = Card;
 
 const Project = () => {
-  const tablet = (item) => (
-    <Card hoverable style={{ width: 240 }} cover={<img src={item.url} />}>
-      <Typography.Title level={2} className={"title-card"}>
-        {item.title}
-      </Typography.Title>
-      <Typography.Text className="title-description">
-        {item.description}
-      </Typography.Text>
-      <Space wrap justify={"start"} align={"start"} className="tag-icon">
-        {item.technical.map((item) => {
-          return (
-            <Tag
-              key={item.label}
-              style={{ marginBottom: "2px" }}
-              className="tag-name"
-              color={item.color}
-            >
-              {item.label}
-            </Tag>
-          );
-        })}
-      </Space>
-    </Card>
-  );
+  // const tablet = (item) => (
+  //   <Card hoverable style={{ width: 240 }} cover={<img src={item.url} />}>
+  //     <Typography.Title level={2} className={"title-card"}>
+  //       {item.title}
+  //     </Typography.Title>
+  //     <Typography.Text className="title-description">
+  //       {item.description}
+  //     </Typography.Text>
+  //     <Space wrap justify={"start"} align={"start"} className="tag-icon">
+  //       {item.technical.map((item) => {
+  //         return (
+  //           <Tag
+  //             key={item.label}
+  //             style={{ marginBottom: "2px" }}
+  //             className="tag-name"
+  //             color={item.color}
+  //           >
+  //             {item.label}
+  //           </Tag>
+  //         );
+  //       })}
+  //     </Space>
+  //   </Card>
+  // );
   return (
     <div id={ESectionHome.PROJECT} className="d-flex">
       <ProjectStyle>
@@ -77,14 +78,12 @@ const Project = () => {
                       })}
                     </Space>
                   </Space>
-                  <Button
-                    href={item.link}
-                    className={"btn-redirect"}
-                    type={"primary"}
-                  >
-                    <LinkOutlined />
-                    View
-                  </Button>
+                  <Link href={item.link}>
+                    <Button className={"btn-redirect"} type={"primary"}>
+                      <LinkOutlined />
+                      View
+                    </Button>
+                  </Link>
                 </Col>
                 <Col span={1}></Col>
                 <Col className={"image-group"} span={10}>

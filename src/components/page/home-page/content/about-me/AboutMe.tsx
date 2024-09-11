@@ -7,9 +7,7 @@ import { useTheme } from "next-themes";
 import TitleDivider from "@/components/common/title-divider/TitleDivider";
 
 const introduction =
-  "Hi there, I'm Long. I'm a 3rd year student at the Institute of Posts and Telecommunications Technology. I got interested in Web Development, and I am trying to learn and become a Web Developer. Currently, I am working at Code Mely - an IT community in Vietnam.";
-const goal =
-  "My career goal is to be a Web developer. I want to develop the ability to work on both front-end and back-end side of web application to be able to build and deploy comprehensive products.";
+  "Hi there, I'm Long. I'm a 4th-year student at the Institute of Posts and Telecommunications Technology, with hands-on experience in Web Development. Over the past year, I have gained valuable experience working on various web projects, both professionally and within the IT community in Vietnam. My passion for web development has led me to explore both front-end and back-end technologies, and I am now focused on becoming a Full Stack Developer. My goal is to continue building my skills and expertise in developing and deploying comprehensive web applications that deliver value and impact.";
 const image =
   "https://firebasestorage.googleapis.com/v0/b/web-chat-neil.appspot.com/o/09328b69-10c8-410c-b03c-2518e32318b9_beluga.jpg?alt=media&token=a813bd79-d9cd-4017-ae34-22b4aa8abd51";
 
@@ -55,7 +53,7 @@ const AboutMe = () => {
               Long Nguyen Xuan
             </Typography.Title>
             <Typography.Text className={"text-introduce"}>
-              {introduction} <br /> {goal}
+              {introduction}
               <br />
               {skills.map((skill) => (
                 <Tag key={skill.text} color={skill.color}>
