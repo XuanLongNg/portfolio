@@ -1,13 +1,11 @@
 "use client";
 import { Flex, Row } from "antd";
 import { ESectionHome } from "@/common/enums/section.enum";
-import useViewport from "@/hooks/common/useViewPort";
 import { useTheme } from "next-themes";
 import TitleDivider from "@/components/common/title-divider/TitleDivider";
 import ExperienceStyle from "@/components/page/home-page/content/experience/experience.style";
 import Timeline from "@/components/common/timeline/Timeline";
 import Text from "@/components/common/text/Text";
-import { COLOR_MAIN_TEXT } from "@/common/constants/colors.constant";
 import {
   CheckCircleOutlined,
   ClockCircleOutlined,
@@ -116,7 +114,6 @@ const timeline: ITimeline[] = mockTimeline
   });
 const Experience = () => {
   const { theme, setTheme } = useTheme();
-  const { view } = useViewport();
 
   return (
     <div id={ESectionHome.EXPERIENCE}>
@@ -127,11 +124,7 @@ const Experience = () => {
             <Rive src={"/assets/pomodoro_design_variation.riv"} />
           </div>
           <div className="d-flex flex-row-reverse timeline">
-            <Timeline
-              tailColor={COLOR_MAIN_TEXT}
-              mode={"left"}
-              items={timeline}
-            />
+            <Timeline mode={"left"} items={timeline} />
           </div>
         </Row>
         {/*<Row className="d-flex container-content">*/}

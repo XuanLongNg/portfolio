@@ -2,7 +2,6 @@
 import AboutMeStyle from "@/components/page/home-page/content/about-me/about-me.style";
 import { Col, Image, Row, Tag, Typography } from "antd";
 import { ESectionHome } from "@/common/enums/section.enum";
-import useViewport from "@/hooks/common/useViewPort";
 import { useTheme } from "next-themes";
 import TitleDivider from "@/components/common/title-divider/TitleDivider";
 
@@ -32,7 +31,6 @@ const skills: ISkillPreview[] = [
 
 const AboutMe = () => {
   const { theme, setTheme } = useTheme();
-  const { view } = useViewport();
 
   return (
     <div id={ESectionHome.ABOUT}>

@@ -1,6 +1,5 @@
 import { ButtonStyle } from "@/components/common/button/button.style";
-import { Button as ButtonAnt, ConfigProvider } from "antd";
-import { ComponentProps } from "react";
+import { ButtonProps, ConfigProvider } from "antd";
 import {
   COLOR_MAIN_TEXT,
   COLOR_TEXT_HIGH_LIGHT_DARK,
@@ -8,10 +7,10 @@ import {
 } from "@/common/constants/colors.constant";
 import { useTheme } from "next-themes";
 
-export interface IButtonProps extends ComponentProps<typeof ButtonAnt> {}
+export interface IButtonProps extends ButtonProps {}
 
 export default function Button({ children, ...rest }: IButtonProps) {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   return (
     <ConfigProvider
       theme={{

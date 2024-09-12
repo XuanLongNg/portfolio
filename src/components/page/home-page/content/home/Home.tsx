@@ -1,6 +1,5 @@
 "use client";
 import HomeStyle from "@/components/page/home-page/content/home/home.style";
-import useViewport from "@/hooks/common/useViewPort";
 import Rive from "@rive-app/react-canvas";
 import { ESectionHome } from "@/common/enums/section.enum";
 import { useTheme } from "next-themes";
@@ -19,7 +18,6 @@ const Home = () => {
     const colorWithoutSharp = color.substring(1);
     return `https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=4000&pause=500&color=${colorWithoutSharp}&center=true&width=435&lines=Hi%2C+I'm+Long.;You+wanna+find+me.;+Check+it+out.`;
   };
-  const { view } = useViewport();
 
   return (
     <div id={ESectionHome.HOME}>

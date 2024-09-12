@@ -1,8 +1,7 @@
-import { Divider } from "antd";
-import { ComponentProps } from "react";
+import { DividerProps } from "antd";
 import { DividerStyle } from "@/components/common/title-divider/divider.style";
 
-export interface IDividerProps extends ComponentProps<typeof Divider> {}
+export interface IDividerProps extends DividerProps {}
 
 export default function TitleDivider({ children, ...rest }: IDividerProps) {
   return <DividerStyle {...rest}>{children}</DividerStyle>;

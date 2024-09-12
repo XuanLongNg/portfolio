@@ -1,5 +1,4 @@
 import { ConfigProvider, Typography } from "antd";
-import { ComponentProps } from "react";
 import {
   COLOR_MAIN_TEXT,
   COLOR_TEXT_SUCCESS_DARK,
@@ -9,9 +8,10 @@ import {
 } from "@/common/constants/colors.constant";
 import { useTheme } from "next-themes";
 import { TextStyle } from "@/components/common/text/text.style";
+import { TextProps } from "antd/es/typography/Text";
 
 const { Text: TextAnt } = Typography;
-export interface ITextProps extends ComponentProps<typeof TextAnt> {}
+export interface ITextProps extends TextProps {}
 
 export default function Text({ children, ...rest }: ITextProps) {
   const { theme, setTheme } = useTheme();

@@ -17,7 +17,6 @@ import { motion } from "framer-motion";
 import ContactStyle, {
   ContactStyleMobile,
 } from "@/components/page/home-page/content/contact/contact.style";
-import useViewport from "@/hooks/common/useViewPort";
 import sendEmail from "@/common/utils/send-mail.util";
 import { RegexEmail } from "@/common/utils/string.util";
 import { ESectionHome } from "@/common/enums/section.enum";
@@ -27,8 +26,6 @@ const description =
   "I'm available for freelance work. Connect with me via the social networking sites or by email below. If you have a question or want to say hi, please fill in the form below and submit it, I'll try my best to get back to you!";
 const email = "ngxuanlong2002@gmail.com";
 const Contact = () => {
-  const { isMobile, isTablet, isDesktop } = useViewport();
-
   const onFinish = async (value) => {
     const isSuccess = sendEmail(value);
     if (isSuccess)
