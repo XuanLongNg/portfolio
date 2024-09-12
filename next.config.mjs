@@ -4,8 +4,9 @@ const nextConfig = {
         styledComponents: true,
     },
     typescript: {
-        ignoreBuildErrors: true, // Disables TypeScript type checking during builds
+        ignoreBuildErrors: true,
     },
+    output: 'export',
 };
 
 export default nextConfig;
