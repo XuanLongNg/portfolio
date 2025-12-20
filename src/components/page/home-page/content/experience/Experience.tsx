@@ -1,16 +1,16 @@
 "use client";
-import { Flex, Row } from "antd";
+// import { Flex, Row } from "antd";
 import { ESectionHome } from "@/common/enums/section.enum";
 import { useTheme } from "next-themes";
 import TitleDivider from "@/components/common/title-divider/TitleDivider";
-import ExperienceStyle from "@/components/page/home-page/content/experience/experience.style";
+// import ExperienceStyle from "@/components/page/home-page/content/experience/experience.style";
 import Timeline from "@/components/common/timeline/Timeline";
 import Text from "@/components/common/text/Text";
-import {
-  CheckCircleOutlined,
-  ClockCircleOutlined,
-  StopOutlined,
-} from "@ant-design/icons";
+// import {
+//   CheckCircleOutlined,
+//   ClockCircleOutlined,
+//   StopOutlined,
+// } from "@ant-design/icons";
 import {
   EStatusProject,
   ETimelineType,
@@ -27,15 +27,20 @@ export interface ITimeline {
 const statusProject = {
   [EStatusProject.PENDING]: {
     color: "gray",
-    icon: <StopOutlined />,
+    // icon: <StopOutlined />,
+    icon: <div />,
   },
   [EStatusProject.IN_PROGRESS]: {
     color: "yellow",
-    icon: <ClockCircleOutlined />,
+    // icon: <ClockCircleOutlined />,
+    icon: <div />,
+
   },
   [EStatusProject.COMPLETED]: {
     color: "green",
-    icon: <CheckCircleOutlined />,
+    // icon: <CheckCircleOutlined />,
+    icon: <div />,
+
   },
 };
 
@@ -51,21 +56,23 @@ const renderStatus = (status: EStatusProject) => {
 
 const EndTimeline = ({ data }: { data: string }) => {
   return (
-    <Flex vertical>
-      <Text type="success" strong>
-        {data}
-      </Text>
-    </Flex>
+      <div></div>
+    // <Flex vertical>
+    //   <Text type="success" strong>
+    //     {data}
+    //   </Text>
+    // </Flex>
   );
 };
 
 const PositionTimeline = ({ data }: { data: string }) => {
   return (
-    <Flex vertical>
-      <Text type="success" strong>
-        {data}
-      </Text>
-    </Flex>
+      <div></div>
+    // <Flex vertical>
+    //   <Text type="success" strong>
+    //     {data}
+    //   </Text>
+    // </Flex>
   );
 };
 
@@ -78,7 +85,9 @@ const ProjectTimeline = ({ data }: { data: IProject }) => {
     <Text key={data}>{`- ${data}\n`}</Text>
   ));
   return (
-    <Flex vertical>
+    <div>
+    {/*<Flex vertical>*/}
+
       <Text type="success" strong>
         {data.company} - {data.name} &#183;&nbsp;
         {renderStatus(data.status)}
@@ -87,11 +96,13 @@ const ProjectTimeline = ({ data }: { data: IProject }) => {
         <Text type="warning">Technology:&nbsp;</Text>
         <Text>{technology}</Text>
       </div>
-      <Flex vertical>
+      <div>
+        {/*<Flex vertical>*/}
+
         <Text type="warning">My responsibility</Text>
         {responsibility}
-      </Flex>
-    </Flex>
+      </div>
+    </div>
   );
 };
 const timeline: ITimeline[] = mockTimeline
@@ -117,16 +128,18 @@ const Experience = () => {
 
   return (
     <div id={ESectionHome.EXPERIENCE}>
-      <ExperienceStyle>
+      {/*<ExperienceStyle>*/}
+        <div>
+
         <TitleDivider orientation={"left"}>Experience</TitleDivider>
-        <Row className={"container-content"}>
-          <div className="animation">
-            <Rive src={"/assets/pomodoro_design_variation.riv"} />
-          </div>
-          <div className="d-flex flex-row-reverse timeline">
-            <Timeline mode={"left"} items={timeline} />
-          </div>
-        </Row>
+        {/*<Row className={"container-content"}>*/}
+        {/*  <div className="animation">*/}
+        {/*    <Rive src={"/assets/pomodoro_design_variation.riv"} />*/}
+        {/*  </div>*/}
+        {/*  <div className="d-flex flex-row-reverse timeline">*/}
+        {/*    <Timeline mode={"left"} items={timeline} />*/}
+        {/*  </div>*/}
+        {/*</Row>*/}
         {/*<Row className="d-flex container-content">*/}
         {/*  <Timeline*/}
         {/*    tailColor={COLOR_MAIN_TEXT}*/}
@@ -134,7 +147,7 @@ const Experience = () => {
         {/*    items={timeline}*/}
         {/*  />*/}
         {/*</Row>*/}
-      </ExperienceStyle>
+      </div>
     </div>
   );
 };

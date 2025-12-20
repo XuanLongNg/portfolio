@@ -1,17 +1,16 @@
-import AboutMe from "@/components/page/home-page/content/about-me/AboutMe";
-import Contact from "@/components/page/home-page/content/contact/Contact";
-import Home from "@/components/page/home-page/content/home/Home";
-import Project from "@/components/page/home-page/content/project/Project";
-import Experience from "@/components/page/home-page/content/experience/Experience";
+// import AboutMe from "@/components/page/home-page/content/about-me/AboutMe";
+// import Contact from "@/components/page/home-page/content/contact/Contact";
+// import Project from "@/components/page/home-page/content/project/Project";
 
 export default function HomePage() {
-  return (
-    <div>
-      <Home />
-      <AboutMe />
-      <Experience />
-      <Project />
-      <Contact />
-    </div>
-  );
+    return (
+        <div className={"text-white w"}>
+            Hdahudahahđậhađaj
+            {/*<Home />*/}
+            {/*/!*<AboutMe />*!/*/}
+            {/*<Experience />*/}
+            {/*/!*<Project />*!/*/}
+            {/*/!*<Contact />*!/*/}
+        </div>
+    );
 }

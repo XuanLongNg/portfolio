@@ -1,5 +1,5 @@
 "use client";
-import HomeStyle from "@/components/page/home-page/content/home/home.style";
+// import HomeStyle from "@/components/page/home-page/content/home/home.style";
 import Rive from "@rive-app/react-canvas";
 import { ESectionHome } from "@/common/enums/section.enum";
 import { useTheme } from "next-themes";
@@ -21,7 +21,8 @@ const Home = () => {
 
   return (
     <div id={ESectionHome.HOME}>
-      <HomeStyle className="d-flex flex-column align-items-center">
+      {/*<HomeStyle className="d-flex flex-column align-items-center">*/}
+      <div className="d-flex flex-column align-items-center">
         <div className="card-image">
           {theme === "light" && (
             <Rive
@@ -46,7 +47,7 @@ const Home = () => {
             alt="Typing SVG"
           />
         </div>
-      </HomeStyle>
+      </div>
     </div>
   );
 };
