@@ -13,6 +13,10 @@
     --s-text-h3: 32px;
     --s-text-h4: 24px;
     --s-text-h5: 20px;
+    --s-button-h-1: 32px;
+    --s-button-h-2: 40px;
+    --s-button-h-3: 48px;
+    --s-button-h-4: 56px;
 
     --scroll-track: #0d1421;
     --scroll-thumb: #b5b3b3;
@@ -29,7 +33,7 @@
     --secondary-foreground: oklch(0.205 0 0);
     --muted: oklch(0.97 0 0);
     --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
+    --accent: oklch(0.556 0 0);
     --accent-foreground: oklch(0.205 0 0);
     --destructive: oklch(0.577 0.245 27.325);
     --border: oklch(0.922 0 0);
@@ -51,7 +55,6 @@
 }
 
 * {
-    background-color: var(--bg-primary);
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -113,6 +116,10 @@ h5 {
     font-size: var(--s-text-h5);
 }
 
+button {
+    cursor: pointer;
+    min-height: var(--s-button-h-1);
+}
 
 @theme inline {
     --radius-sm: calc(var(--radius) - 4px);

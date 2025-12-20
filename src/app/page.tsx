@@ -4,8 +4,7 @@
 
 export default function HomePage() {
     return (
-        <div className={"text-white w"}>
-            Hdahudahahđậhađaj
+        <div className={"text-white"}>
             {/*<Home />*/}
             {/*/!*<AboutMe />*!/*/}
             {/*<Experience />*/}

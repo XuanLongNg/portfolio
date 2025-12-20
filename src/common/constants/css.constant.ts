@@ -18,7 +18,7 @@ export const S_TEXT_H4 = 24;
 export const S_TEXT_H5 = 20;
 
 // button height
-export const S_BUTTON_H_1 = 24;
-export const S_BUTTON_H_2 = 28;
-export const S_BUTTON_H_3 = 32;
-export const S_BUTTON_H_4 = 36;
+export const S_BUTTON_H_1 = 32;
+export const S_BUTTON_H_2 = 40;
+export const S_BUTTON_H_3 = 48;
+export const S_BUTTON_H_4 = 56;
